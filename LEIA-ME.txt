@@ -1,0 +1,33 @@
+UNDERLANCHES - VERSÃO INDENTADA
+
+COMO ABRIR:
+1. Extraia o arquivo ZIP.
+2. Abra a pasta UnderLanches_Indentado no VS Code.
+3. Abra index.html no navegador.
+4. Se quiser, instale a extensão Live Server no VS Code.
+
+WHATSAPP:
+Abra script.js e procure:
+
+const WHATSAPP = "5537999999999";
+
+Troque pelo número real da empresa:
+55 + DDD + número.
+
+EXEMPLO:
+5537999999999
+
+PEDIDOS:
+O carrinho usa localStorage.
+Os itens continuam no carrinho quando o usuário troca de página.
+A tela pedidos.html permite:
+- aumentar quantidade;
+- diminuir quantidade;
+- remover item;
+- calcular total;
+- escolher pagamento;
+- informar endereço;
+- enviar o pedido pelo WhatsApp.
+
+IMAGENS:
+Veja images/LEIA-ME.txt.
