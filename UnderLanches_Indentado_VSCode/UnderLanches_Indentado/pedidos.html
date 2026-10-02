@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seu Pedido | UnderLanches</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="top">
+
+        <div class="container top-inner">
+
+            <a class="logo" href="index.html">
+                <b>♥</b> UNDERLANCHES
+            </a>
+
+            <nav class="nav">
+                <a href="index.html">Início</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="personagens.html">Personagens</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+            <a class="cart-link" href="pedidos.html">
+                🛒 Pedido
+                <span class="cart-count">0</span>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="menu-header">
+
+            <div class="container">
+
+                <p class="small-title">
+                    ★ SEU CARRINHO ★
+                </p>
+
+                <h1>
+                    FINALIZE SEU
+                    <span>PEDIDO</span>
+                </h1>
+
+                <p class="menu-description">
+                    Confira os produtos,
+                    informe seus dados e finalize.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="menu-section">
+
+            <div class="container">
+
+                <!-- PRODUTOS DO CARRINHO -->
+
+                <div id="orderList"></div>
+
+
+                <br><br>
+
+
+                <!-- TOTAL -->
+
+                <div class="product">
+
+                    <div class="product-content">
+
+                        <span class="category">
+                            RESUMO
+                        </span>
+
+                        <h2>VALOR DO PEDIDO</h2>
+
+                        <div class="product-footer">
+
+                            <span>Subtotal</span>
+
+                            <strong id="subtotal">
+                                R$ 0,00
+                            </strong>
+
+                        </div>
+
+                        <div class="product-footer">
+
+                            <span>Total</span>
+
+                            <strong id="total">
+                                R$ 0,00
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <br><br>
+
+
+                <!-- DADOS -->
+
+                <div class="product">
+
+                    <div class="product-content">
+
+                        <span class="category">
+                            FINALIZAR
+                        </span>
+
+                        <h2>DADOS DO CLIENTE</h2>
+
+                        <br>
+
+                        <form
+                            onsubmit="
+                                return finalizeOrder(event)
+                            "
+                        >
+
+                            <p>Nome</p>
+
+                            <input
+                                id="customerName"
+                                type="text"
+                                placeholder="Seu nome"
+                                required
+                            >
+
+
+                            <br><br>
+
+
+                            <p>Telefone</p>
+
+                            <input
+                                id="customerPhone"
+                                type="tel"
+                                placeholder="(00) 00000-0000"
+                                required
+                            >
+
+
+                            <br><br>
+
+
+                            <p>Forma de pagamento</p>
+
+                            <select id="payment">
+
+                                <option value="Pix">
+                                    Pix
+                                </option>
+
+                                <option value="Dinheiro">
+                                    Dinheiro
+                                </option>
+
+                                <option value="Cartão">
+                                    Cartão
+                                </option>
+
+                            </select>
+
+
+                            <br><br>
+
+
+                            <p>
+                                Endereço e observações
+                            </p>
+
+                            <textarea
+                                id="address"
+                                placeholder="Digite o endereço para entrega e alguma observação..."
+                                required
+                            ></textarea>
+
+
+                            <br><br>
+
+
+                            <button type="submit">
+                                FINALIZAR PELO WHATSAPP
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <div>
+                <strong>♥ UNDERLANCHES</strong>
+                <p>Hambúrgueres • Hot Dogs • Determinação</p>
+            </div>
+
+            <p>© 2026 UnderLanches</p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Cardápio | UnderLanches</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="top">
+
+        <div class="container top-inner">
+
+            <a
+                class="logo"
+                href="index.html"
+            >
+                <b>♥</b>
+                UNDERLANCHES
+            </a>
+
+            <nav class="nav">
+
+                <a href="index.html">
+                    Início
+                </a>
+
+                <a href="cardapio.html">
+                    Cardápio
+                </a>
+
+                <a href="personagens.html">
+                    Personagens
+                </a>
+
+                <a href="sobre.html">
+                    Sobre
+                </a>
+
+                <a href="contato.html">
+                    Contato
+                </a>
+
+            </nav>
+
+            <a
+                class="cart-link"
+                href="pedidos.html"
+            >
+                🛒 Pedido
+
+                <span class="cart-count">
+                    0
+                </span>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO -->
+    <main>
+
+        <!-- TÍTULO -->
+        <section class="menu-header">
+
+            <div class="container">
+
+                <p class="small-title">
+                    ★ MENU UNDERLANCHES ★
+                </p>
+
+                <h1>
+                    ESCOLHA SEU
+                    <span>LANCHE</span>
+                </h1>
+
+                <p class="menu-description">
+                    Escolha seus favoritos,
+                    adicione ao pedido e prepare-se
+                    para recuperar seu HP.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CARDÁPIO -->
+        <section class="menu-section">
+
+            <div class="container">
+
+                <div class="product-grid">
+
+
+                    <!-- =====================
+                         SOUL BURGER
+                    ====================== -->
+
+                    <article class="product">
+
+                        <div class="product-image">
+
+                            <img
+                                src="soulburger.png"
+                                alt="Soul Burger"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <span class="category">
+                                HAMBÚRGUER
+                            </span>
+
+                            <h2>
+                                SOUL BURGER
+                            </h2>
+
+                            <p>
+                                Hambúrguer artesanal,
+                                queijo, alface, tomate
+                                e molho especial da casa.
+                            </p>
+
+                            <div class="product-footer">
+
+                                <strong>
+                                    R$ 24,90
+                                </strong>
+
+                                <button
+                                    onclick="
+                                        addToCart(
+                                            'soulburger',
+                                            'SOUL BURGER',
+                                            24.90
+                                        )
+                                    "
+                                >
+                                    + ADICIONAR
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =====================
+                         DARK BURGER
+                    ====================== -->
+
+                    <article class="product">
+
+                        <div class="product-image">
+
+                            <img
+                                src="darkburger.png"
+                                alt="Dark Burger"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <span class="category">
+                                HAMBÚRGUER
+                            </span>
+
+                            <h2>
+                                DARK BURGER
+                            </h2>
+
+                            <p>
+                                Dois hambúrgueres,
+                                cheddar, bacon,
+                                cebola caramelizada
+                                e barbecue.
+                            </p>
+
+                            <div class="product-footer">
+
+                                <strong>
+                                    R$ 29,90
+                                </strong>
+
+                                <button
+                                    onclick="
+                                        addToCart(
+                                            'darkburger',
+                                            'DARK BURGER',
+                                            29.90
+                                        )
+                                    "
+                                >
+                                    + ADICIONAR
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =====================
+                         STAR DOG
+                    ====================== -->
+
+                    <article class="product">
+
+                        <div class="product-image">
+
+                            <img
+                                src="stardog.png"
+                                alt="Star Dog"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <span class="category">
+                                HOT DOG
+                            </span>
+
+                            <h2>
+                                STAR DOG
+                            </h2>
+
+                            <p>
+                                Salsicha, queijo,
+                                milho, batata palha
+                                e molho especial.
+                            </p>
+
+                            <div class="product-footer">
+
+                                <strong>
+                                    R$ 19,90
+                                </strong>
+
+                                <button
+                                    onclick="
+                                        addToCart(
+                                            'stardog',
+                                            'STAR DOG',
+                                            19.90
+                                        )
+                                    "
+                                >
+                                    + ADICIONAR
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =====================
+                         ROYAL DOG
+                    ====================== -->
+
+                    <article class="product">
+
+                        <div class="product-image">
+
+                            <img
+                                src="royaldog.png"
+                                alt="Royal Dog"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <span class="category">
+                                HOT DOG
+                            </span>
+
+                            <h2>
+                                ROYAL DOG
+                            </h2>
+
+                            <p>
+                                Hot dog completo
+                                com queijo, bacon,
+                                batata e molho cremoso.
+                            </p>
+
+                            <div class="product-footer">
+
+                                <strong>
+                                    R$ 23,90
+                                </strong>
+
+                                <button
+                                    onclick="
+                                        addToCart(
+                                            'royaldog',
+                                            'ROYAL DOG',
+                                            23.90
+                                        )
+                                    "
+                                >
+                                    + ADICIONAR
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =====================
+                         SOUL COMBO
+                    ====================== -->
+
+                    <article class="product">
+
+                        <div class="product-image">
+
+                            <img
+                                src="soulcombo.png"
+                                alt="Soul Combo"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <span class="category">
+                                COMBO
+                            </span>
+
+                            <h2>
+                                SOUL COMBO
+                            </h2>
+
+                            <p>
+                                Soul Burger,
+                                batata crocante
+                                e refrigerante.
+                            </p>
+
+                            <div class="product-footer">
+
+                                <strong>
+                                    R$ 34,90
+                                </strong>
+
+                                <button
+                                    onclick="
+                                        addToCart(
+                                            'soulcombo',
+                                            'SOUL COMBO',
+                                            34.90
+                                        )
+                                    "
+                                >
+                                    + ADICIONAR
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =====================
+                         STAR FRIES
+                    ====================== -->
+
+                    <article class="product">
+
+                        <div class="product-image">
+
+                            <img
+                                src="starfries.png"
+                                alt="Star Fries"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <span class="category">
+                                PORÇÃO
+                            </span>
+
+                            <h2>
+                                STAR FRIES
+                            </h2>
+
+                            <p>
+                                Batatas crocantes
+                                cobertas com queijo
+                                e molho especial.
+                            </p>
+
+                            <div class="product-footer">
+
+                                <strong>
+                                    R$ 14,90
+                                </strong>
+
+                                <button
+                                    onclick="
+                                        addToCart(
+                                            'starfries',
+                                            'STAR FRIES',
+                                            14.90
+                                        )
+                                    "
+                                >
+                                    + ADICIONAR
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <div class="container footer-content">
+
+            <div>
+
+                <strong>
+                    ♥ UNDERLANCHES
+                </strong>
+
+                <p>
+                    Hambúrgueres • Hot Dogs • Determinação
+                </p>
+
+            </div>
+
+            <p>
+                © 2026 UnderLanches
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- SISTEMA DE PEDIDOS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

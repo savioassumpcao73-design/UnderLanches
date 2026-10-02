@@ -1,0 +1,1229 @@
+@import url(
+    "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Press+Start+2P&display=swap"
+);
+
+
+/* ==================================
+   CONFIGURAÇÕES GERAIS
+================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --background: #08090d;
+
+    --card: #11131a;
+
+    --card-light: #171923;
+
+    --border: #292d39;
+
+    --white: #ffffff;
+
+    --gray: #a7abb8;
+
+    --red: #ff4052;
+
+    --yellow: #ffd84d;
+
+    --purple: #9b72ff;
+
+}
+
+
+body {
+
+    background: var(--background);
+
+    color: var(--white);
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    line-height: 1.5;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+button {
+
+    font-family: inherit;
+
+}
+
+
+.container {
+
+    width: min(
+        1180px,
+        92%
+    );
+
+    margin: auto;
+
+}
+
+
+
+/* ==================================
+   CABEÇALHO
+================================== */
+
+.top {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    height: 75px;
+
+    background:
+        rgba(
+            8,
+            9,
+            13,
+            0.96
+        );
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+}
+
+
+.top-inner {
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+
+    gap: 25px;
+
+}
+
+
+.logo {
+
+    font-family:
+        "Press Start 2P",
+        monospace;
+
+    font-size: 13px;
+
+}
+
+
+.logo b {
+
+    color: var(--red);
+
+    font-size: 20px;
+
+}
+
+
+.nav {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+
+.nav a {
+
+    color: #cfd2dc;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.2s;
+
+}
+
+
+.nav a:hover {
+
+    color: var(--red);
+
+}
+
+
+.cart-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        10px
+        14px;
+
+    background:
+        var(--card-light);
+
+    border:
+        1px solid
+        #3a3e4a;
+
+    border-radius: 8px;
+
+    font-weight: 800;
+
+}
+
+
+.cart-count {
+
+    padding:
+        2px
+        7px;
+
+    background:
+        var(--red);
+
+    border-radius:
+        20px;
+
+}
+
+
+
+/* ==================================
+   CABEÇALHO DO CARDÁPIO
+================================== */
+
+.menu-header {
+
+    padding:
+        80px
+        0
+        55px;
+
+    text-align: center;
+
+}
+
+
+.small-title {
+
+    margin-bottom:
+        20px;
+
+    color:
+        var(--yellow);
+
+    font-family:
+        "Press Start 2P",
+        monospace;
+
+    font-size:
+        8px;
+
+}
+
+
+.menu-header h1 {
+
+    font-family:
+        "Press Start 2P",
+        monospace;
+
+    font-size:
+        clamp(
+            30px,
+            5vw,
+            55px
+        );
+
+    line-height:
+        1.5;
+
+}
+
+
+.menu-header h1 span {
+
+    color:
+        var(--red);
+
+}
+
+
+.menu-description {
+
+    max-width:
+        650px;
+
+    margin:
+        20px
+        auto
+        0;
+
+    color:
+        var(--gray);
+
+    font-size:
+        17px;
+
+}
+
+
+
+/* ==================================
+   CARDÁPIO
+================================== */
+
+.menu-section {
+
+    padding:
+        20px
+        0
+        90px;
+
+}
+
+
+.product-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap:
+        25px;
+
+}
+
+
+
+/* ==================================
+   CARD DO PRODUTO
+================================== */
+
+.product {
+
+    overflow: hidden;
+
+    background:
+        var(--card);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        16px;
+
+    transition:
+        transform
+        0.2s,
+        border-color
+        0.2s;
+
+}
+
+
+.product:hover {
+
+    transform:
+        translateY(
+            -6px
+        );
+
+    border-color:
+        #555a69;
+
+}
+
+
+
+/* ==================================
+   FOTO DO PRODUTO
+================================== */
+
+.product-image {
+
+    width: 100%;
+
+    height: 260px;
+
+    overflow: hidden;
+
+    background:
+        #050608;
+
+}
+
+
+.product-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform
+        0.35s;
+
+}
+
+
+.product:hover
+.product-image img {
+
+    transform:
+        scale(
+            1.05
+        );
+
+}
+
+
+
+/* ==================================
+   INFORMAÇÕES DO PRODUTO
+================================== */
+
+.product-content {
+
+    padding:
+        22px;
+
+}
+
+
+.category {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        13px;
+
+    padding:
+        5px
+        9px;
+
+    color:
+        var(--yellow);
+
+    border:
+        1px solid
+        #454956;
+
+    border-radius:
+        20px;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+}
+
+
+.product-content h2 {
+
+    margin-bottom:
+        10px;
+
+    font-size:
+        21px;
+
+}
+
+
+.product-content p {
+
+    min-height:
+        65px;
+
+    color:
+        var(--gray);
+
+    font-size:
+        14px;
+
+}
+
+
+
+/* ==================================
+   PREÇO E BOTÃO
+================================== */
+
+.product-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        15px;
+
+    margin-top:
+        20px;
+
+}
+
+
+.product-footer strong {
+
+    font-size:
+        21px;
+
+}
+
+
+.product-footer button {
+
+    padding:
+        11px
+        14px;
+
+    background:
+        var(--red);
+
+    color:
+        var(--white);
+
+    border:
+        none;
+
+    border-radius:
+        7px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        900;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.2s;
+
+}
+
+
+.product-footer button:hover {
+
+    transform:
+        translateY(
+            -2px
+        );
+
+    background:
+        #ff5c6c;
+
+}
+
+
+
+/* ==================================
+   RODAPÉ
+================================== */
+
+footer {
+
+    padding:
+        35px
+        0;
+
+    color:
+        #777c88;
+
+    border-top:
+        1px solid
+        var(--border);
+
+}
+
+
+.footer-content {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+}
+
+
+footer strong {
+
+    color:
+        var(--white);
+
+    font-family:
+        "Press Start 2P",
+        monospace;
+
+    font-size:
+        9px;
+
+}
+
+
+footer p {
+
+    margin-top:
+        7px;
+
+}
+
+
+
+/* ==================================
+   CELULAR / TABLET
+================================== */
+
+@media (
+    max-width: 900px
+) {
+
+    .nav {
+
+        display:
+            none;
+
+    }
+
+
+    .product-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+    }
+
+}
+
+
+@media (
+    max-width: 600px
+) {
+
+    .product-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .menu-header {
+
+        padding:
+            55px
+            0
+            35px;
+
+    }
+
+
+    .product-image {
+
+        height:
+            240px;
+
+    }
+
+
+    .product-footer {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .product-footer button {
+
+        width:
+            100%;
+
+    }
+
+
+    .footer-content {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+}
+/* ==========================================
+   PEDIDOS - VISUAL MELHORADO
+========================================== */
+
+
+/* Área principal dos produtos do carrinho */
+
+#orderList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* Cada produto adicionado */
+
+.order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #11131a,
+            #171923
+        );
+
+    border: 1px solid #292d39;
+
+    border-radius: 14px;
+
+    transition: 0.2s;
+}
+
+
+.order-item:hover {
+    border-color: #ff4052;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* Nome do produto */
+
+.order-item b {
+    font-size: 17px;
+    color: white;
+}
+
+
+/* Preço */
+
+.order-item .price {
+    font-size: 19px;
+    font-weight: 900;
+
+    color: #ffd84d;
+}
+
+
+/* ==========================================
+   BOTÕES DE QUANTIDADE
+========================================== */
+
+.qty {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+
+.qty button {
+    min-width: 36px;
+    height: 36px;
+
+    padding: 0 10px;
+
+    background: #20232d;
+
+    color: white;
+
+    border: 1px solid #3b3f4c;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.qty button:hover {
+    background: #ff4052;
+
+    border-color: #ff4052;
+}
+
+
+.qty span {
+    min-width: 35px;
+
+    text-align: center;
+
+    font-weight: 800;
+
+    font-size: 16px;
+}
+
+
+/* Botão remover */
+
+.qty .remove {
+    width: auto;
+
+    padding: 0 13px;
+
+    background: transparent;
+
+    color: #ff5c6c;
+
+    border-color: #ff4052;
+
+    font-size: 12px;
+}
+
+
+.qty .remove:hover {
+    background: #ff4052;
+
+    color: white;
+}
+
+
+/* ==========================================
+   CAIXAS DO FORMULÁRIO
+========================================== */
+
+form p {
+    margin-bottom: 8px;
+
+    color: #d7d9e0;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    background: #0b0c11;
+
+    color: white;
+
+    border: 2px solid #292d39;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
+}
+
+
+/* Quando clicar na caixa */
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    background: #101118;
+
+    border-color: #ff4052;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(255, 64, 82, 0.12);
+}
+
+
+/* Placeholder */
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #686d7b;
+}
+
+
+/* Endereço */
+
+form textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+
+/* ==========================================
+   FORMA DE PAGAMENTO
+========================================== */
+
+form select {
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   BOTÃO FINALIZAR
+========================================== */
+
+form button[type="submit"] {
+    width: 100%;
+
+    padding: 17px;
+
+    margin-top: 5px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4052,
+            #e52e41
+        );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+form button[type="submit"]:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 25px
+        rgba(255, 64, 82, 0.25);
+}
+
+
+/* ==========================================
+   CAIXAS DE RESUMO E DADOS
+========================================== */
+
+.menu-section > .container > .product {
+    max-width: 850px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background:
+        linear-gradient(
+            145deg,
+            #11131a,
+            #151821
+        );
+
+    border: 1px solid #292d39;
+
+    border-radius: 16px;
+}
+
+
+.menu-section > .container > .product
+.product-content {
+    padding: 30px;
+}
+
+
+/* Títulos */
+
+.menu-section > .container > .product h2 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================
+   TOTAL
+========================================== */
+
+#total {
+    color: #ffd84d;
+
+    font-size: 26px;
+}
+
+
+#subtotal {
+    color: #ffffff;
+
+    font-size: 18px;
+}
+
+
+/* ==========================================
+   CARRINHO VAZIO
+========================================== */
+
+.empty {
+    padding: 45px 25px;
+
+    background: #11131a;
+
+    border:
+        1px dashed
+        #3c404c;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    color: #a7abb8;
+}
+
+
+.empty h3 {
+    margin-bottom: 10px;
+
+    color: white;
+
+    font-size: 22px;
+}
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media (max-width: 600px) {
+
+    .order-item {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .order-item .price {
+        font-size: 20px;
+    }
+
+
+    .qty {
+        flex-wrap: wrap;
+    }
+
+
+    .menu-section > .container > .product
+    .product-content {
+        padding: 22px;
+    }
+
+
+    form input,
+    form select,
+    form textarea {
+        font-size: 16px;
+    }
+
+}
+/* ==================================
+   BOTÃO VER CARDÁPIO
+================================== */
+
+.btn-cardapio {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 16px 28px;
+
+    background: #ff4052;
+
+    color: #ffffff;
+
+    border: 2px solid #ff6675;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 0 20px
+        rgba(255, 64, 82, 0.35);
+
+    transition: 0.2s;
+
+    cursor: pointer;
+}
+
+
+.btn-cardapio:hover {
+    background: #ff5c6c;
+
+    border-color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 30px
+        rgba(255, 64, 82, 0.55);
+}
+/* BOTÃO VER CARDÁPIO DO CARRINHO VAZIO */
+
+.empty .btn {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 14px 25px;
+
+    background: #ff4052;
+
+    color: #ffffff;
+
+    border: 2px solid #ff4052;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    letter-spacing: 0.5px;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 0 18px
+        rgba(255, 64, 82, 0.3);
+}
+
+
+.empty .btn:hover {
+    background: #ffffff;
+
+    color: #ff4052;
+
+    border-color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 25px
+        rgba(255, 255, 255, 0.25);
+}
+/* ==================================
+   IMAGENS DOS PERSONAGENS
+================================== */
+
+.personagem-img {
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #050608;
+
+    padding: 25px;
+
+    overflow: hidden;
+}
+
+
+.personagem-img img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
